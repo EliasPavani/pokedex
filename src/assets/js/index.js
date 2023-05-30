@@ -13,3 +13,13 @@ ButtonChangeTheme.addEventListener("click", () => {
         imgChangetheme.setAttribute("src", "./assets/img/moon.png")
     }
 });
+
+function buscar() {
+    var termoDeBusca = document.getElementById('caixa-busca').value.toUpperCase()
+
+    var listaFiltrada = listaPokemons.filter(function (pokemon) {
+        return pokemon.name.english.toUpperCase().includes(termoDeBusca)
+    })
+
+    exibirPokemons(listaFiltrada)
+}
