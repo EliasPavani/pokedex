@@ -8,8 +8,8 @@ ButtonChangeTheme.addEventListener("click", () => {
     body.classList.toggle("black-mode")
 
     if (BlackModeBeActive) {
-        imgChangetheme.setAttribute("src", "./src/img/sun.png")
+        imgChangetheme.setAttribute("src", "./assets/img/sun.png")
     } else {
-        imgChangetheme.setAttribute("src", "./src/img/moon.png")
+        imgChangetheme.setAttribute("src", "./assets/img/moon.png")
     }
 });
