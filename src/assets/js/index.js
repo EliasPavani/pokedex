@@ -19,12 +19,14 @@ function buscar() {
 
     var listaFiltrada = listaPokemons.filter(function (pokemon) {
         var possuiNomeValido = pokemon.name.english.toUpperCase().includes(termoDeBusca) 
+        var possuiDescricaoValida = pokemon.description.toUpperCase().includes(termoDeBusca)
         var possuiNumeroValido = pokemon.id == termoDeBusca
         var possuiTipoValido = pokemon.type.filter((type) => {
             return type.toUpperCase().includes(termoDeBusca)
         }).length > 0
 
-        return possuiNomeValido || possuiTipoValido || possuiNumeroValido
+
+        return possuiNomeValido || possuiTipoValido || possuiNumeroValido || possuiDescricaoValida
     })
 
     exibirPokemons(listaFiltrada)
