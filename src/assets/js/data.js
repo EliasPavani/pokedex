@@ -22,7 +22,17 @@ function exibirPokemons(pokemons) {
 
         var img = document.createElement("img")
 
-        img.src = pokemon.image.hires
+        var src = pokemon.image.thumbnail
+
+        if (!src) {
+            src = pokemon.image.hires
+        }
+
+        if (!src) {
+            src = pokemon.image.sprite
+        }
+
+        img.src = src ? src : ''
         img.alt = pokemon.name.english
         img.classList.add("gif")
 
