@@ -18,7 +18,13 @@ function buscar() {
     var termoDeBusca = document.getElementById('caixa-busca').value.toUpperCase()
 
     var listaFiltrada = listaPokemons.filter(function (pokemon) {
-        return pokemon.name.english.toUpperCase().includes(termoDeBusca)
+        var possuiNomeValido = pokemon.name.english.toUpperCase().includes(termoDeBusca) 
+        var possuiNumeroValido = pokemon.id == termoDeBusca
+        var possuiTipoValido = pokemon.type.filter((type) => {
+            return type.toUpperCase().includes(termoDeBusca)
+        }).length > 0
+
+        return possuiNomeValido || possuiTipoValido || possuiNumeroValido
     })
 
     exibirPokemons(listaFiltrada)
