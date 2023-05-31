@@ -39,6 +39,16 @@ header .logo:hover, header .image-button:hover, main .card-pokemon:hover {
     cursor: pointer;
 }
 
+input {
+    margin-right: 20px;
+    padding: 8px 20px;
+    background-image: url("../img/icone-lupa-pesquisar.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
 main {
     padding: 25px;
 }
