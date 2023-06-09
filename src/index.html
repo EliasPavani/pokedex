@@ -14,8 +14,10 @@
 <link rel="stylesheet" href="./assets/css/reset.css">
 <link rel="stylesheet" href="./assets/css/styles.css">
 <link rel="stylesheet" href="./assets/css/scrollbar.css">
+<link rel="stylesheet" href="./assets/css/modal.css">
 
 <body>
+    <div id="overlay"></div>
     <header>
         <a href="#">
             <img src="./assets/img/pokeball.png" alt="pokeball" class="logo">
@@ -27,7 +29,46 @@
           </button>
         </div>
     </header>
+    
     <main>
+        <div id="details">
+            <div class="header">
+                <div>
+                    <h1 class="name"></h1>
+                    <span class="number"></span>
+                </div>
+                <button onclick="closeDetails()">&times;</button>
+            </div>
+            <div class="body">
+                <img class="image-active" />
+                <div class="types"></div>
+                <div class="stats">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>HP:</td>
+                                <td>Attack:</td>
+                                <td>Defense:</td>
+                                <td>Sp. Attack:</td>
+                                <td>Sp. Defense:</td>
+                                <td>Speed:</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="hp"></td>
+                                <td class="attack"></td>
+                                <td class="defense"></td>
+                                <td class="sp-attack"></td>
+                                <td class="sp-defense"></td>
+                                <td class="speed"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="descriptionActive"></div>
+            </div>
+        </div>
         <ul id="list" class="list-pokemon"></ul>
     </main>
 
