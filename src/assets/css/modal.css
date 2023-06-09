@@ -1,0 +1,119 @@
+#details {
+    background-color: #d8e3ec;
+    position: fixed;
+    border-radius: 0px 16px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+
+    padding: 32px;
+    height: 100%;
+    width: 100%;
+    max-height: 600px;
+    max-width: 800px;
+
+    z-index: 100;
+    display: none;
+
+    box-shadow: -20px 20px 35px 1px rgba(10, 49, 86, 0.18);
+}
+
+#details button {
+    padding: 0px;
+    
+    background-color: transparent;
+    border: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#details.active {
+    display: flex;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+#overlay.active {
+    display: block;
+}
+
+#details .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#details .header div {
+    align-items: baseline; 
+    display: flex; 
+    gap: 10px;
+}
+
+#details .body {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    text-shadow: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-active {
+    max-width: 150px;
+}
+
+div.types {
+    color: white;
+    text-shadow: 
+                1px 1px 1px #000, 
+                1px 1px 1px #000,      
+                1px 1px 1px #000,    
+                1px 1px 1px #000;
+    display: flex;
+    gap: 15px;
+}
+
+div.type {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.stats table {
+    border-spacing: 3px;
+}
+
+.stats thead td {
+    background-color: darkgray !important;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+div.stats td {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div.descriptionActive {
+    background-color: darkgrey;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+h1.name {
+    color: #000;
+    text-shadow: none;
+}
